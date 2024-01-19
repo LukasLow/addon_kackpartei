@@ -16,6 +16,7 @@ function replaceTextOnPage() {
             if (node.nodeType === 3) {
                 let text = node.nodeValue;
                 let replacedText = text.replace(/afd/gi, 'müllpartei');
+                replacedText = replacedText.replace(/Alternative für Deutschland/gi, 'Nazis in Anzügen');
 
                 if (replacedText !== text) {
                     element.replaceChild(document.createTextNode(replacedText), node);
